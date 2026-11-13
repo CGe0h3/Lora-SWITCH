@@ -71,12 +71,16 @@ a.dl.off { opacity: .55; cursor: not-allowed; pointer-events: none; }
 .status.err { color: #ff8a80; }
 .hash { font-family: var(--font-mono); font-size: 11px; color: var(--muted); word-break: break-all; }
 
-.support { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-           background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-top: 16px; }
+.support { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;
+           background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-top: 16px; }
 .support p { margin: 0; color: var(--muted); max-width: 60ch; }
-a.kofi { display: inline-flex; align-items: center; gap: 8px; background: #26ed2d; color: #10230f; font-weight: 700;
-         text-decoration: none; border-radius: 9px; padding: 9px 16px; white-space: nowrap; }
-a.kofi:hover { filter: brightness(1.06); }
+#kofi-button-container { display: flex; justify-content: center; }
+a.kofi { display: inline-flex; align-items: center; gap: 8px; background: #ffffff; color: #202124; font-weight: 700;
+         text-decoration: none; border-radius: 9px; padding: 9px 18px; white-space: nowrap; box-shadow: 0 1px 0 rgba(0,0,0,.25); }
+a.kofi:hover { background: #f1f3f5; }
+/* official Ko-fi widget (on the live site): white button, dark text */
+#kofi-button-container .kofi-button { background-color: #ffffff !important; }
+#kofi-button-container .kofitext { color: #202124 !important; }
 main section { padding: 34px 0 6px; border-top: 1px solid var(--line); margin-top: 26px; }
 main section h2 { font-size: 24px; margin-bottom: 14px; }
 .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -177,7 +181,7 @@ footer p { margin: 6px 0; max-width: 90ch; }
     <p>LoRa-SWITCH is free. If it saves you a few reflashes, you can buy me a coffee to keep the next versions coming.</p>
     <div id="kofi-button-container">
       <a class="kofi" href="https://ko-fi.com/C0C21UC0BW" target="_blank" rel="noopener">
-        <svg width="22" height="16" viewBox="0 0 22 16" aria-hidden="true"><path d="M2 2h13v7a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V2z" fill="#fff"/><path d="M15 4h2.5a2.8 2.8 0 0 1 0 5.6H15" fill="none" stroke="#fff" stroke-width="2"/><path d="M8.5 10.5 6 8a1.5 1.5 0 0 1 2.5-1.7A1.5 1.5 0 0 1 11 8z" fill="#ff5e5b"/></svg>
+        <svg width="22" height="16" viewBox="0 0 22 16" aria-hidden="true"><path d="M2 2h13v7a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V2z" fill="#29abe0"/><path d="M15 4h2.5a2.8 2.8 0 0 1 0 5.6H15" fill="none" stroke="#29abe0" stroke-width="2"/><path d="M8.5 10.5 6 8a1.5 1.5 0 0 1 2.5-1.7A1.5 1.5 0 0 1 11 8z" fill="#ff5e5b"/></svg>
         Support me on Ko-fi
       </a>
     </div>
@@ -286,7 +290,7 @@ footer p { margin: 6px 0; max-width: 90ch; }
 (function () {
   var c = document.getElementById("kofi-button-container");
   if (c && window.kofiwidget2) {
-    window.kofiwidget2.init("Support me on Ko-fi", "#26ed2d", "C0C21UC0BW");
+    window.kofiwidget2.init("Support me on Ko-fi", "#ffffff", "C0C21UC0BW");
     c.innerHTML = window.kofiwidget2.getHTML();
   }
 })();
