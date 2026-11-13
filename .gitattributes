@@ -1,0 +1,4 @@
+*.bat -text
+*.bin binary
+*.exe binary
+*.pdf binary

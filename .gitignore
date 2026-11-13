@@ -1,0 +1,6 @@
+build/
+sdkconfig
+sdkconfig.old
+managed_components/
+__pycache__/
+firmware/heltec-v4-multiboot-complet.bin
