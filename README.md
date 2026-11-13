@@ -1,8 +1,8 @@
 # LoRa-SWITCH - Heltec V4 Multi-Boot
 
-> **Download:** get the ready-to-install package from the
-> [latest release](https://github.com/CGe0h3/Lora-SWITCH/releases/latest) (`LoRa-SWITCH-v5.zip`).
-> The full flash image used by `INSTALLER.bat` is only in the release zip, not in this repository.
+> **Download:** [`releases/LoRa-SWITCH-v5.zip`](https://github.com/CGe0h3/Lora-SWITCH/raw/main/releases/LoRa-SWITCH-v5.zip)
+> (ready-to-install package, SHA-256 `5665eb21bb2d6b947c40283f2ab79df3339d3e5b977c8111a91e7b0befab6dd8`).
+> The full flash image used by `INSTALLER.bat` is only inside that zip.
 > Website: https://cge0h3.github.io/Lora-SWITCH/
 
 Boot menu for the **Heltec WiFi LoRa 32 V4** (ESP32-S3, 16 MB flash).
