@@ -263,7 +263,7 @@ footer p { margin: 6px 0; max-width: 90ch; }
           <tr><td>MeshCore on iPhone</td><td>Right after the very first pairing, the app may report “Failed to fetch device info”. Tap Reconnect: the next connections work directly.</td></tr>
           <tr><td>Reticulum</td><td>The RNode is a radio modem driven by Reticulum software: over USB from a computer (rnsd, NomadNet, MeshChat) or over Bluetooth from Sideband on Android. It comes pre-provisioned for the Heltec V4 (850–950 MHz).</td></tr>
           <tr><td>Platform</td><td>The one-click installer is for Windows 11. On macOS and Linux, the package includes a Python flashing script.</td></tr>
-          <tr><td>Status</td><td>Beta. Meshtastic and MeshCore have been tested on a Heltec V4 with an iPhone; Reticulum and Hibernate are new in v5. Please report what works on your setup.</td></tr>
+          <tr><td>Status</td><td>Beta. Meshtastic and MeshCore have been tested on a Heltec V4 with an iPhone; Reticulum and Hibernate are new in v5. Please report what works on your setup: <a class="mail" href="#contact" data-u="toolsbyenzo" data-d="pm.me" data-goatcounter-click="contact-email" data-goatcounter-title="Contact email">toolsbyenzo [at] pm.me</a>.</td></tr>
         </tbody>
       </table>
     </div>
@@ -282,6 +282,7 @@ footer p { margin: 6px 0; max-width: 90ch; }
 
 <footer>
   <div class="wrap">
+    <p id="contact">Contact: <a class="mail" href="#contact" data-u="toolsbyenzo" data-d="pm.me" data-goatcounter-click="contact-email" data-goatcounter-title="Contact email">toolsbyenzo [at] pm.me</a></p>
     <p>Made by <a href="https://toolsbyenzo.etsy.com" target="_blank" rel="noopener" data-goatcounter-click="etsy-footer" data-goatcounter-title="ToolsByEnzo footer link">ToolsByEnzo</a> · Heltec V4 nodes on Etsy.</p>
     <p>LoRa-SWITCH is an independent project. It is not affiliated with or endorsed by Meshtastic, MeshCore, Reticulum, Heltec Automation or Semtech. LoRa® is a registered trademark of Semtech Corporation.</p>
     <p>Included software and licenses: <a href="https://github.com/meshtastic/firmware">Meshtastic firmware</a> (GPL-3.0), <a href="https://github.com/meshcore-dev/MeshCore">MeshCore</a> (MIT), <a href="https://github.com/markqvist/RNode_Firmware">RNode firmware</a> (GPL-3.0), <a href="https://github.com/espressif/esptool">esptool</a> (GPL-2.0), <a href="https://github.com/espressif/esp-idf">ESP-IDF</a> (Apache-2.0). Source links for each exact version are in THIRD_PARTY.md inside the package.</p>
@@ -316,6 +317,13 @@ footer p { margin: 6px 0; max-width: 90ch; }
     if (k) { k.setAttribute("data-goatcounter-click", "kofi"); k.setAttribute("data-goatcounter-title", "Ko-fi button"); }
   }
 })();
+</script>
+<script>
+document.querySelectorAll("a.mail").forEach(function (a) {
+  var m = a.getAttribute("data-u") + "@" + a.getAttribute("data-d");
+  a.href = "mailto:" + m;
+  a.textContent = m;
+});
 </script>
 <!-- GoatCounter: page views + clicks on Download / Ko-fi (no cookies) -->
 <script data-goatcounter="https://cge0h.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
