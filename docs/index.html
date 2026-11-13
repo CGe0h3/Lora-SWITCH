@@ -292,6 +292,8 @@ footer p { margin: 6px 0; max-width: 90ch; }
   if (c && window.kofiwidget2) {
     window.kofiwidget2.init("Support me on Ko-fi", "#ffffff", "C0C21UC0BW");
     c.innerHTML = window.kofiwidget2.getHTML();
+    var k = c.querySelector("a");
+    if (k) { k.setAttribute("data-goatcounter-click", "kofi"); k.setAttribute("data-goatcounter-title", "Ko-fi button"); }
   }
 })();
 </script>
