@@ -1,7 +1,7 @@
 # LoRa-SWITCH - Heltec V4 Multi-Boot
 
 > **Download:** [`releases/LoRa-SWITCH-v5.zip`](https://github.com/CGe0h3/Lora-SWITCH/raw/main/releases/LoRa-SWITCH-v5.zip)
-> (ready-to-install package, SHA-256 `5665eb21bb2d6b947c40283f2ab79df3339d3e5b977c8111a91e7b0befab6dd8`).
+> (ready-to-install package, SHA-256 `c432a6f92597d46ff5c37cadfff901958f5c5c66c5794b9fd85383f7fcb3bf75`).
 > The full flash image used by `INSTALLER.bat` is only inside that zip.
 > Website: https://lora-switch.us
 
@@ -61,14 +61,12 @@ Names and labels are in `tools/layout.py` (single source; rerun `./build.sh` aft
 - **Reticulum slot = RNode firmware 1.86** (official Heltec V4 build), Bluetooth address +3,
   pre-provisioned by `tools/rnode_provision.py` (EEPROM blob in NVS: product C3, model C8,
   firmware hash), web-console SPIFFS image in its 1920 KB filesystem.
-- `MISE_A_JOUR_LORA-SWITCH.bat`: new menu/bootloader + RNode without erasing Meshtastic/MeshCore.
 
 ## Quick install (Windows 11)
 
 Double-click **`INSTALLER.bat`**: it finds the COM port, erases the board, then writes
-`firmware/heltec-v4-multiboot-complet.bin` (menu + Meshtastic 2.7.26 + MeshCore 1.18.0).
+`firmware/heltec-v4-multiboot-complet.bin` (menu + Meshtastic 2.7.26 + MeshCore 1.18.0 + RNode 1.86).
 No Python required (`tools/windows/esptool.exe` is included).
-Step-by-step guide: `Guide_Installation_LoRa-SWITCH.pdf`.
 
 ## Included firmwares (`firmware/`)
 
@@ -77,9 +75,6 @@ Step-by-step guide: `Guide_Installation_LoRa-SWITCH.pdf`.
 | `meshtastic-2.7.26-heltec-v4.bin` | Meshtastic 2.7.26.54e0d8d (stable channel) | github.com/meshtastic/firmware |
 | `meshcore-1.18.0-companion-ble-heltec-v4.bin` | MeshCore companion BLE v1.18.0-81dbae5 | github.com/meshcore-dev/MeshCore |
 | `heltec-v4-multiboot-complet.bin` | full image to write at 0x0 | built here |
-
-**Already installed the first version?** `MISE_A_JOUR_MESHCORE.bat` replaces only slot 1
-(MeshCore with its own Bluetooth address); Meshtastic and its settings are kept.
 
 ## Bluetooth: one address per firmware
 
@@ -95,8 +90,6 @@ firmwares get a warning and are left unchanged.
 "Failed to fetch device info - timeout" (the serial log shows the board answered). Tap
 **Reconnect**: it works, and later connections are direct.
 
-Windows helpers: `MONITEUR_SERIE.bat` (serial log to `journal_serie.txt`),
-`REINIT_BLUETOOTH_MESHCORE.bat` (erase MeshCore's Bluetooth bonds only).
 
 ## Manual install (any OS)
 
